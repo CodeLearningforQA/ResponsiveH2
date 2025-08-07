@@ -1,0 +1,160 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #dedede;
+    padding: 5px;
+    margin: 15px;
+    font-size: 25px;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-size: 1.95em;
+}
+
+h2 {
+    text-align: center;
+}
+
+li {
+    margin-top: 20px;
+}
+
+img {
+    border: 5px solid black;
+    border-radius: 30px;
+    width: 100%;
+}
+
+.label {
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.grid {
+    display: grid;
+    width: 95%;
+    gap: 10px;
+
+}
+
+.grid img {
+    display: block;
+    border: none;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+
+}
+
+.grid figure {
+    border: 5px solid black;
+    border-radius: 35px;
+    
+}
+
+.grid figcaption {
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    width: 100%;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    background-color: black;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+@media screen and (min-width: 772px) {
+    .grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .grid img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border: none;
+    }
+
+    .grid figure {
+        position: relative;
+        border-radius: 50%;
+        overflow: hidden;
+        aspect-ratio: 1 / 1;
+    }
+
+    .grid figcaption {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        padding: 8px;
+        font-size: 1rem;
+        border-bottom-left-radius: 50%;
+        border-bottom-right-radius: 50%;
+    }
+
+    .grid figure:last-child {
+        grid-column: span 2;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .grid img {
+
+        width: 100%;
+        object-fit: cover;
+        border: none;
+        border-radius: 0;
+    }
+
+    .grid figure {
+        border-radius: 0;
+        aspect-ratio: none;
+    }
+
+    .grid figcaption {
+        bottom: 0;
+        width: 100%;
+        padding: 8px;
+        font-size: 1rem;
+        border-radius: 0;
+    }
+
+    .grid figure:nth-child(3n) {
+        grid-column: 1/ span 2;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+    body{
+        background-color:rgb(14, 5, 95);
+        color: beige;
+    }
+  .grid figure {      
+    color: beige;                 
+    border-color: rgb(186, 215, 254);           
+  }
+
+  .grid figcaption {
+    color: beige;                
+  }
+
+  footer a{
+    color: beige;
+  }
+}
+
